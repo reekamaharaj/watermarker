@@ -1,0 +1,7 @@
+{
+    "name": "reeka/watermark",
+    "description": "watermark",
+    "require": {
+        "intervention/image": "^2.4"
+    }
+}
