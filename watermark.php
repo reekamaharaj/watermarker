@@ -11,6 +11,7 @@ $artfolder = scandir('art');
 $dot = ['.','..'];
 $filestowatermark = array_diff($artfolder, $dot);
 
+// foreach to watermark each art file
 foreach ($filestowatermark as $index => $filetowatermark){
     $originalArt = Image::make('art/' . $filetowatermark);
 
