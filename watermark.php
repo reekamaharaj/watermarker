@@ -13,6 +13,7 @@ $filesToWatermark = array_diff($artFolder, $dot);
 
 // foreach to watermark each art file
 foreach ($filesToWatermark as $index => $fileToWatermark){
+    $watermark = Image::make('watermark.png')->opacity(45)->rotate(45);
     $originalArt = Image::make('fullpageart/' . $fileToWatermark);
 
     $widthOriginalArt = $originalArt->width();
@@ -41,6 +42,7 @@ $smallArtFolder = scandir('smallart');
 $smallFilesToWatermark = array_diff($smallArtFolder, $dot);
 
 foreach ($smallFilesToWatermark as $index => $fileToWatermark){
+    $watermark = Image::make('watermark.png')->opacity(45)->rotate(45);
     $originalArt = Image::make('smallart/' . $fileToWatermark);
 
     $widthOriginalArt = $originalArt->width();
